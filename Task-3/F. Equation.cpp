@@ -2,7 +2,7 @@
 //a power functoin
 long long power(long long base, long long exponent) {
     if (exponent == 0) {
-        return 1;
+        return 0;
     }
 
     long long result = base;
