@@ -1,9 +1,9 @@
 #include<iostream>
 
 int main(){
-    int n,m;
+    long long n,m;
     std::cin>>n>>m;     //user inputs the sizes of the two arrays
-    int a[n],b[m];
+    long long a[n],b[m];
     //entering the elements of the first array
     for(int i = 0; i < n;i++){
         std::cin>>a[i];
@@ -20,13 +20,14 @@ int main(){
     }
     //defining a counter variable
     int count = 0;
+    //defining an iterating variable for the supposed supsequence
+    int j = 0;
     //loop interating the "main" array
     for(int i =0; i < n; i++){
-        //loop iterating the "possible" subsequence
-        for(int j = 0; j < m; j++){
-            if(a[i]==b[j]){
-                count++;
-            }
+        //iterating the "possible" subsequence
+        if(a[i]==b[j]){
+            count++;
+            j++;  
         }
     }
     //if b is a subsequence counter will increment m numbers of times 
