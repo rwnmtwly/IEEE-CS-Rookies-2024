@@ -16,12 +16,12 @@ int main(){
         for (int i = 0; i < n; i++ ){
             count++;
             //ending points of subarrays
-            for(int j = i; j < n; j++){
-                if(arr[j]>arr[j+1]){    //condition to only count increasing subarrays
-                    break;
+            for(int j = i+1; j < n; j++){
+                if(arr[j]>arr[j-1]){    //condition to only count increasing subarrays
+                   count++;
                 }
                 else{
-                    count++;
+                    break;
                 }
                 }
             }
